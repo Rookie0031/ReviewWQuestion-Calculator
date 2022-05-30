@@ -11,6 +11,11 @@
 		44A52592283E540B00F39B89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A52591283E540B00F39B89 /* ContentView.swift */; };
 		44A52594283E540C00F39B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A52593283E540C00F39B89 /* Assets.xcassets */; };
 		44A52597283E540C00F39B89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A52596283E540C00F39B89 /* Preview Assets.xcassets */; };
+		A9CB246C2841F7C600B8AA51 /* MainCalculationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB246B2841F7C600B8AA51 /* MainCalculationButton.swift */; };
+		A9CB246E2841F84100B8AA51 /* SubCalculationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB246D2841F84100B8AA51 /* SubCalculationButton.swift */; };
+		A9CDB33F28438D3E00EC556B /* SignsAndNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CDB33E28438D3E00EC556B /* SignsAndNumbers.swift */; };
+		A9CDB3412843B7A400EC556B /* NumberButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CDB3402843B7A400EC556B /* NumberButtons.swift */; };
+		A9CDB3432843C78A00EC556B /* CalculationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CDB3422843C78A00EC556B /* CalculationData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		44A52591283E540B00F39B89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		44A52593283E540C00F39B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44A52596283E540C00F39B89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A9CB246B2841F7C600B8AA51 /* MainCalculationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCalculationButton.swift; sourceTree = "<group>"; };
+		A9CB246D2841F84100B8AA51 /* SubCalculationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCalculationButton.swift; sourceTree = "<group>"; };
+		A9CDB33E28438D3E00EC556B /* SignsAndNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsAndNumbers.swift; sourceTree = "<group>"; };
+		A9CDB3402843B7A400EC556B /* NumberButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtons.swift; sourceTree = "<group>"; };
+		A9CDB3422843C78A00EC556B /* CalculationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 			children = (
 				44A5258F283E540B00F39B89 /* ReviewWQuestion_CalculatorApp.swift */,
 				44A52591283E540B00F39B89 /* ContentView.swift */,
+				A9CB246D2841F84100B8AA51 /* SubCalculationButton.swift */,
+				A9CB246B2841F7C600B8AA51 /* MainCalculationButton.swift */,
+				A9CDB3402843B7A400EC556B /* NumberButtons.swift */,
+				A9CDB33E28438D3E00EC556B /* SignsAndNumbers.swift */,
+				A9CDB3422843C78A00EC556B /* CalculationData.swift */,
 				44A52593283E540C00F39B89 /* Assets.xcassets */,
 				44A52595283E540C00F39B89 /* Preview Content */,
 			);
@@ -137,7 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9CDB3412843B7A400EC556B /* NumberButtons.swift in Sources */,
+				A9CDB33F28438D3E00EC556B /* SignsAndNumbers.swift in Sources */,
+				A9CDB3432843C78A00EC556B /* CalculationData.swift in Sources */,
+				A9CB246C2841F7C600B8AA51 /* MainCalculationButton.swift in Sources */,
 				44A52592283E540B00F39B89 /* ContentView.swift in Sources */,
+				A9CB246E2841F84100B8AA51 /* SubCalculationButton.swift in Sources */,
 				44A52590283E540B00F39B89 /* ReviewWQuestion_CalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
