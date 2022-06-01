@@ -1,17 +1,31 @@
 import Foundation
+import SwiftUI
+
+var displayData = CalculationData().displayData
+
+func clearString() -> String {
+    var clearString : String = ""
+    if displayData.count > 0 {
+        clearString = "AC"
+    } else {
+        clearString = "C"
+    }
+    return clearString
+}
 
 enum MainCalculation: String, CaseIterable {
     case division = "÷"
-    case multiplication = "x"
+    case multiplication = "×"
     case subtraction = "-"
     case addition = "+"
-    case result = "="
+    case result = "﹦"
 }
 
-enum SubCalculation: String, CaseIterable {
-    case division = "C"
-    case multiplication = "+/-"
-    case subtraction = "%"
+enum SubCalculationCase: String, CaseIterable {
+    // 디스플레이 텍스트 여부에 따라서 AC 로 바꾸고 싶은데 enum 내부에서 처리할 수 있는 방법은?
+    case clear = "C"
+    case plusMinus = "+/-"
+    case percentage = "%"
 }
 
 enum Numbers : Int, CaseIterable {
@@ -26,3 +40,4 @@ enum Numbers : Int, CaseIterable {
     case three = 3
     
 }
+
