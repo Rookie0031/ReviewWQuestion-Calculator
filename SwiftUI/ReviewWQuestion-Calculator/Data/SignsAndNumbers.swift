@@ -1,17 +1,7 @@
 import Foundation
 import SwiftUI
 
-var displayData = CalculationData().displayData
-
-func clearString() -> String {
-    var clearString : String = ""
-    if displayData.count > 0 {
-        clearString = "AC"
-    } else {
-        clearString = "C"
-    }
-    return clearString
-}
+// 계산기 UI에 필요한 정보들을 enum형태로 보관
 
 enum MainCalculation: String, CaseIterable {
     case division = "÷"
@@ -40,4 +30,15 @@ enum Numbers : Int, CaseIterable {
     case three = 3
     
 }
-
+// AC와 C 표기여부에 따라 다를 예정
+//var displayData = CalculationData().displayData
+//
+//func clearString() -> String {
+//    var clearString : String = ""
+//    if displayData.count > 0 {
+//        clearString = "AC"
+//    } else {
+//        clearString = "C"
+//    }
+//    return clearString
+//}

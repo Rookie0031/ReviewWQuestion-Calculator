@@ -10,8 +10,9 @@ struct ContentView: View {
         ZStack {
             Rectangle().foregroundColor(.black)
                 .ignoresSafeArea()
-            // 배경색
+            // 배경색 삽입
             
+            // 기기별 사이즈에 따라 비율 유지를 위해 geo를 도입함
             GeometryReader { geo in
                 VStack(alignment: .trailing){
                     displayText()
@@ -23,7 +24,7 @@ struct ContentView: View {
                                     SubCalculationButton(sign: sign.rawValue)
                                 }
                             }
-                            // 숫자별 버튼을 따로 사용하기 위해서 중간에 Grid형태를 넣음
+                            // 숫자별 버튼을 따로 관리하기 위해서 Grid형태를 넣음
                             LazyVGrid(columns: columns){
                                 ForEach(Numbers.allCases, id:\.self){ number in
                                     NumberButton(number: number.rawValue)
@@ -46,6 +47,7 @@ struct ContentView: View {
         }
     }
     
+    // 디스플레이될 텍스트(숫자)를 반환해주는 함수
     private func displayText() -> some View {
         
         Text(result.displayData.count != 0 ? (result.isMinus == true ? "-\(result.displayData)" : result.displayData) : "0")
@@ -62,14 +64,9 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-// if input == sign -> button {
-// 
-
-// 최종 연산 결과를 처리해주는 함수를 만들어야겟다
-// 1. 숫자 자리가 9자리 이상이면 9자리만 인덱싱해라
-// 만약에 인트형이면 인트로 바꿔내라
-
+// 9자리 숫자를 제한하기 위해서 임시로 만든 함수. 제작중...
 func textLengthLimit(_ a: String) -> String {
     let index = a.index(a.startIndex, offsetBy: 8)
     return String(a[..<index])
 }
+

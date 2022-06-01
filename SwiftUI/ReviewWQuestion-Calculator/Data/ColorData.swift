@@ -1,5 +1,6 @@
 import SwiftUI
 
+// UI 색상 데이터 
 extension Color {
     static let mainCalButtonColor = Color(hex: "#F1A33B")
     static let subCalButtonColor = Color(hex: "#A5A5A5")
@@ -20,7 +21,6 @@ extension Color {
 }
 
 // localized string key를 string으로 바꿔주는 함수 
-
 extension LocalizedStringKey {
     
     public func toString() -> String {

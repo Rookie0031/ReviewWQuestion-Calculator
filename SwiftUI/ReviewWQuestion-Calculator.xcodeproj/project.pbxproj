@@ -71,15 +71,10 @@
 		44A5258E283E540B00F39B89 /* ReviewWQuestion-Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				44A5258F283E540B00F39B89 /* ReviewWQuestion_CalculatorApp.swift */,
-				44A52591283E540B00F39B89 /* ContentView.swift */,
-				A9CB246D2841F84100B8AA51 /* SubCalculationButton.swift */,
-				A9CB246B2841F7C600B8AA51 /* MainCalculationButton.swift */,
-				A9CDB3402843B7A400EC556B /* NumberButtons.swift */,
-				A9CDB33E28438D3E00EC556B /* SignsAndNumbers.swift */,
-				A9CDB3422843C78A00EC556B /* CalculationData.swift */,
-				A9AE47B52845E23500FD0AFD /* ColorData.swift */,
-				A9AE47B92846589700FD0AFD /* ErrorHandling.swift */,
+				A9A165222847A7E80070CD07 /* System */,
+				A9A165232847A7F20070CD07 /* View */,
+				A9A165212847A7DF0070CD07 /* Buttons */,
+				A9A165202847A7D50070CD07 /* Data */,
 				A92F9DC72846FFA500B99F86 /* Localizable.strings */,
 				44A52593283E540C00F39B89 /* Assets.xcassets */,
 				44A52595283E540C00F39B89 /* Preview Content */,
@@ -93,6 +88,43 @@
 				44A52596283E540C00F39B89 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A9A165202847A7D50070CD07 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A9CDB33E28438D3E00EC556B /* SignsAndNumbers.swift */,
+				A9CDB3422843C78A00EC556B /* CalculationData.swift */,
+				A9AE47B52845E23500FD0AFD /* ColorData.swift */,
+				A9AE47B92846589700FD0AFD /* ErrorHandling.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A9A165212847A7DF0070CD07 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A9CB246D2841F84100B8AA51 /* SubCalculationButton.swift */,
+				A9CB246B2841F7C600B8AA51 /* MainCalculationButton.swift */,
+				A9CDB3402843B7A400EC556B /* NumberButtons.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A9A165222847A7E80070CD07 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				44A5258F283E540B00F39B89 /* ReviewWQuestion_CalculatorApp.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		A9A165232847A7F20070CD07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44A52591283E540B00F39B89 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
