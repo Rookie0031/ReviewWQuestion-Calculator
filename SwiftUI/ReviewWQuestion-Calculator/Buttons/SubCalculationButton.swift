@@ -24,7 +24,7 @@ struct SubCalculationButton: View {
             } else {
                 result.displayData = String(division(Double(result.displayData) ?? 0, 100))
             }
-        }){ ㅁ
+        }){
             Text(sign)
                 .font(.system(size: 30).bold())
                 .foregroundColor(.black)
