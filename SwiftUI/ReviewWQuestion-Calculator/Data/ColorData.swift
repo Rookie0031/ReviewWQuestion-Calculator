@@ -1,6 +1,6 @@
 import SwiftUI
 
-// UI 색상 데이터 
+// UI 색상 extension
 extension Color {
     static let mainCalButtonColor = Color(hex: "#F1A33B")
     static let subCalButtonColor = Color(hex: "#A5A5A5")
@@ -24,10 +24,7 @@ extension Color {
 extension LocalizedStringKey {
     
     public func toString() -> String {
-        //use reflection
         let mirror = Mirror(reflecting: self)
-        
-        //try to find 'key' attribute value
         let attributeLabelAndValue = mirror.children.first { (arg0) -> Bool in
             let (label, _) = arg0
             if(label == "key"){
@@ -35,9 +32,7 @@ extension LocalizedStringKey {
             }
             return false;
         }
-        
         if(attributeLabelAndValue != nil) {
-            //ask for localization of found key via NSLocalizedString
             return String.localizedStringWithFormat(NSLocalizedString(attributeLabelAndValue!.value as! String, comment: ""));
         }
         else {

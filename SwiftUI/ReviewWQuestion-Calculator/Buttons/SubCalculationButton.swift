@@ -2,8 +2,9 @@
 import SwiftUI
 
 struct SubCalculationButton: View {
-    @EnvironmentObject var result : CalculationData
-    var sign : String
+    @EnvironmentObject var result: CalculationData
+    var sign: String
+    
     var body: some View {
         Button(action: {
             if sign == "C" || sign == "AC" {
@@ -11,16 +12,12 @@ struct SubCalculationButton: View {
                 result.buttonIndex = ""
                 
             } else if sign == "+/-" {
-                // 만약 최종 결과가 음수면 abs처리하고
-                // 최종결과가 양수면 음수처리해라 , 근데 finaldata는 double이고 display는 string이다.
-                //                result.finalData = abs(result.finalData)
-                //                result.displayData = String(result.finalData)
                 if Double(result.displayData) ?? 0 < 0 {
-                    //                    abs(Double(result.displayData) ?? 0)
+                    result.displayData = String(abs(Double(result.displayData) ?? 0))
                 } else {
                     result.isMinus.toggle()
-                    //                result.isMinus.toggle()
                 }
+
             } else {
                 result.displayData = String(division(Double(result.displayData) ?? 0, 100))
             }
@@ -35,7 +32,8 @@ struct SubCalculationButton: View {
 }
 
 struct DotButton: View {
-    @EnvironmentObject var result : CalculationData
+    @EnvironmentObject var result: CalculationData
+    
     var body: some View {
         Button(action: {
             if result.displayData.contains(".") == false {
