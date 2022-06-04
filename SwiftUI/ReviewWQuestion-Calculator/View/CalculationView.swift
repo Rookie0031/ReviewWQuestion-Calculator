@@ -7,11 +7,11 @@ struct CalculationView: View {
     
     var body: some View {
         
-        ZStack {
-            Rectangle().foregroundColor(.black)
-                .ignoresSafeArea()
-            
-            GeometryReader { geo in
+        GeometryReader { geo in
+            ZStack {
+                Rectangle().foregroundColor(.black)
+                    .ignoresSafeArea()
+                
                 VStack(alignment: .trailing){
                     displayText()
                     
