@@ -3,6 +3,7 @@ import SwiftUI
 
 struct CalculationView: View {
     @EnvironmentObject var result: CalculationData
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     let columns = Array(repeating: GridItem(.fixed(80)), count: 3)
     
     var body: some View {
@@ -16,10 +17,10 @@ struct CalculationView: View {
                     displayText()
                     
                     HStack {
-                        VStack{
+                        VStack {
                             HStack {
                                 ForEach(SubCalculationCase.allCases, id:\.self){ sign in
-                                    SubCalculationButton(sign: sign.rawValue)
+                                    SubCalculationButton(calculationSign: sign.rawValue)
                                 }
                             }
                             LazyVGrid(columns: columns){
@@ -27,14 +28,14 @@ struct CalculationView: View {
                                     NumberButton(number: number.rawValue)
                                 }
                             }
-                            HStack{
+                            HStack {
                                 ZeroButton()
                                 DotButton()
                             }
                         }
-                        VStack{
+                        VStack {
                             ForEach(MainCalculation.allCases, id:\.self){ sign in
-                                MainCalculationButton(sign: sign.rawValue)
+                                MainCalculationButton(calculationSign: sign.rawValue)
                             }
                         }
                     }
